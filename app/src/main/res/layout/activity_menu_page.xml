@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/kids_background"
-    tools:context=".second_page">
+    tools:context=".menu_page">
 
     <TextView
         android:id="@+id/welcome_text"
@@ -22,22 +22,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Square Calculation -->
-
-    <!-- Multiplication Table -->
-
     <ImageButton
         android:id="@+id/n_power"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="148dp"
         android:background="@null"
-        android:contentDescription="Square of Numbers"
         android:scaleType="fitCenter"
         android:src="@drawable/square_icon"
+        android:contentDescription="Square of Numbers"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"/>
 
+    <!-- Multiplication Table -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,8 +52,8 @@
         android:id="@+id/table"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
         android:background="@null"
         android:contentDescription="Generate Table"
         android:scaleType="fitCenter"
@@ -82,8 +80,8 @@
         android:id="@+id/calculater"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
         android:background="@null"
         android:contentDescription="Open Calculator"
         android:scaleType="fitCenter"
@@ -109,8 +107,8 @@
         android:id="@+id/area_perimeter"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="44dp"
         android:background="@null"
         android:contentDescription="Area and Perimeter"
         android:scaleType="fitCenter"
@@ -121,7 +119,7 @@
 
     <TextView
         android:layout_width="230dp"
-        android:layout_height="45dp"
+        android:layout_height="46dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
         android:text="Aera and Perimeter of      Shapes"
@@ -131,31 +129,30 @@
         app:layout_constraintStart_toStartOf="@id/area_perimeter"
         app:layout_constraintTop_toBottomOf="@id/area_perimeter" />
 
-    <EditText
-        android:id="@+id/entered_text"
-        android:layout_width="65dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        android:textAlignment="center"
+    <ImageButton
+        android:id="@+id/take_test"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@null"
+        android:contentDescription="Take Test"
+        android:scaleType="fitCenter"
+        android:src="@drawable/quiz_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculater" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="5dp"
-        android:text="PLEASE ENTER A NUMBER TO PERFORM SQUARE OR MULTIPLICATION TABLE"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/entered_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:text="Take Test"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/take_test"
+        app:layout_constraintTop_toBottomOf="@id/take_test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

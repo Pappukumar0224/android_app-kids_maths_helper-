@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class second_page extends AppCompatActivity {
@@ -18,9 +19,10 @@ public class second_page extends AppCompatActivity {
         setContentView(R.layout.activity_second_page2);
 
         EditText text = findViewById(R.id.entered_text);
-        Button power = findViewById(R.id.n_power);
-        Button table = findViewById(R.id.table);
-        Button calculator = findViewById(R.id.calculater);
+        ImageButton power = findViewById(R.id.n_power);
+        ImageButton table = findViewById(R.id.table);
+        ImageButton calculator = findViewById(R.id.calculater);
+        ImageButton area_perimeter = findViewById(R.id.area_perimeter);
 
         power.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +65,13 @@ public class second_page extends AppCompatActivity {
             }
         });
 
+        area_perimeter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent area = new Intent(second_page.this,area_peri.class);
+                startActivity(area);
+            }
+        });
         calculator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
